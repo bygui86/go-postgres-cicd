@@ -23,7 +23,7 @@ FROM alpine
 
 # copy application
 WORKDIR /bin/
-COPY --from=builder --chown=1001 /bin/app .
+COPY --from=builder /bin/app .
 
 # expose ports
 EXPOSE 8080
